@@ -90,7 +90,7 @@ Kubernetes を初めて触った人が戸惑う点の一つに、
 
 ## 4. Kubernetes の全体像  ― Control Plane と Node の役割
 
-Kubernetesには**現在の状態と理想の状態の差分を埋め続ける**という役割を持っています。  
+Kubernetesの役割は**現在の状態と理想の状態の差分を埋め続ける**仕組みです。  
 この仕組みを実現するために、Kubernetes は役割を分離しています。
 
 - Control Plane
