@@ -1,4 +1,4 @@
-# 3-1 ハンズオン：Pod / Deployment / Service ― 壊して、戻って、任せる ―
+# 3-1 ハンズオン：Pod / Deployment / Service ～壊して、戻って、任せる～
 
 想定環境：KillerCoda（Kubernetes クラスタ起動済み）
 以降の操作はすべて kubectl を使用します。
@@ -37,7 +37,9 @@ Pod が存在しないことを確認してください。
 - Kubernetes は「何も勝手に起動しない」
 
 #### 💡 問い
-‐ Kubernetes は勝手に何かを起動するか？
+- Kubernetes は勝手に何かを起動するか？
+
+---
 
 ## 1. Pod を作成する ― 実行単位とは何か
 #### Pod 定義ファイルを作成
@@ -78,6 +80,7 @@ kubectl describe pod sample-pod
 #### 💡 問い
 - Pod は「何を表している存在」か？
 
+---
 
 ## 2. Pod を削除する　― なぜ戻らないのか
 
@@ -101,6 +104,8 @@ kubectl get pod
 #### 💡 問い
 - これが本番だったらどうなるか？
 - 毎回人が作り直すのか？
+
+---
 
 ## 3. Deployment を使って Pod を管理する
 
@@ -160,6 +165,8 @@ kubectl get pod
 ここで重要なのは、Pod を守っているのは人ではなく Deployment
 人は「状態」を定義しているだけという点です。
 
+---
+
 ## 4. レプリカ数を変更する（状態を変える）
 
 #### Deployment のレプリカ数を変更します。
@@ -179,6 +186,8 @@ kubectl get pod
 
 ここでのポイントは、「どれを起動するか」を人が考えていない
 ということです。
+
+---
 
 ## 5. Service を通じて Pod にアクセスする
 #### Service を作成する
@@ -206,6 +215,8 @@ kubectl run curl --rm -it --image=curlimages/curl --restart=Never -- \
 - Pod を直接指定していない
 - Service が間に入っている
 - Pod が増減してもアクセス方法は変わらない
+
+---
 
 ## 6. まとめ（このハンズオンで確認したこと）
 
